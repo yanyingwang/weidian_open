@@ -45,8 +45,8 @@ Weidian.access_token
 ```
 
 #### [Weidian API WIKI](http://wiki.open.weidian.com/):
-Normally, you can use any method of the offical API if HTTP Method of it is GET.
-All you need to do is subsituing "." of API method name with "_".
+Normally, you can use any Offical API method if HTTP Method of it is GET.
+All you need to do is subsituing "." inside API method name with "_".
 
 Example:
 * API method: [vdian.order.list.get](http://wiki.open.weidian.com/index.php?title=%E8%8E%B7%E5%8F%96%E8%AE%A2%E5%8D%95%E5%88%97%E8%A1%A8)
