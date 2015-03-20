@@ -44,12 +44,12 @@ after configuration:
 Weidian.access_token
 ```
 
-#### API WIKI:
-Normally, you can use anyone of the offical [API]("http://wiki.open.weidian.com/index.php?title=%E9%A6%96%E9%A1%B5").
-All you need to do is subsituing "." in the API name with "_".
+#### [Weidian API WIKI](http://wiki.open.weidian.com/):
+Normally, you can use any method of the offical API if HTTP Method of it is GET.
+All you need to do is subsituing "." of API method name with "_".
 
 Example:
-* [vdian.order.list.get](http://wiki.open.weidian.com/index.php?title=%E8%8E%B7%E5%8F%96%E8%AE%A2%E5%8D%95%E5%88%97%E8%A1%A8)
+* API method: [vdian.order.list.get](http://wiki.open.weidian.com/index.php?title=%E8%8E%B7%E5%8F%96%E8%AE%A2%E5%8D%95%E5%88%97%E8%A1%A8)
 ```ruby
 Weidian.vdian_order_list_get(page_num: "1",
                              order_type: "unpay",
@@ -59,7 +59,7 @@ Weidian.vdian_order_list_get(page_num: "1",
 Weidian.vdian_order_list_get(order_type: "unpay", page_num: "1")
 ```
 
-* [vdian.order.get]("http://wiki.open.weidian.com/index.php?title=%E8%8E%B7%E5%8F%96%E8%AE%A2%E5%8D%95%E5%88%97%E8%A1%A8")
+* API method: [vdian.order.get]("http://wiki.open.weidian.com/index.php?title=%E8%8E%B7%E5%8F%96%E8%AE%A2%E5%8D%95%E5%88%97%E8%A1%A8")
 ```ruby
 Weidian.vdian_order_get(order_id: "1164787976")
 ```
