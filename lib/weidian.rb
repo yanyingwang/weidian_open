@@ -9,14 +9,14 @@ module Weidian
 
   HOWTO_CONFIG = <<-EOF
   #{self.name}.config do
-    @app_key = '1111111'             # your app_key
-    @app_secret = '1111111111111111' # your secret
+    @app_key = '1111111'                    # your app_key
+    @app_secret = '1111111111111111'        # your app_secret
   end
 
   or:
 
-  #{self.name}.app_key = '111111'          # your app_key
-  #{self.name}.app_secret = '1111111111'   # your secret
+  #{self.name}.app_key = '111111'           # your app_key
+  #{self.name}.app_secret = '1111111111'    # your app_secret
   EOF
 
 
