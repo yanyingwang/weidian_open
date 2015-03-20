@@ -52,14 +52,14 @@ module Weidian
 
       result = JSON.parse(eat url, :openssl_verify_mode => 'none').fetch('result', {})
 
-      @expire_date = Time.now + result['expire_in'] - 120
+      @expiry_time = Time.now + result['expire_in'] - 120
       @access_token = result['access_token']
 
       @access_token ? @access_token : raise("Get access_token Error:" + "url: #{url}" + result.to_s)
     end
 
     def access_token_expired?
-      Time.now > (@expire_date || Time.now)
+      Time.now > (@expiry_time || Time.now)
     end
 
   end
