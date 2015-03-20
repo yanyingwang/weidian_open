@@ -3,7 +3,9 @@ require 'eat'
 require 'json'
 
 module Weidian
-  API_ENDPOINT = "https://api.vdian.com/"
+  API = { endpoint: 'https://api.vdian.com',
+                   version: '1.0',
+                   format: 'json' }
   HOWTO_CONFIG = <<-EOF
     Configure #{self.name} fist like this:
 
@@ -23,23 +25,38 @@ module Weidian
     attr_accessor :app_key, :app_secret
 
     def access_token
-      (@access_token and !access_token_expired?) ? @access_token : get_access_token_from_api
+      (@access_token && !access_token_expired?) ? @access_token : get_access_token_from_api
     end
+
+    # Gost Method here...
+    def method_missing(method, **param)
+      public = { method: method.to_s.gsub('_', '.'),
+                 access_token: access_token,
+                 version: API[:version],
+                 format: API[:json] }
+      url = API[:endpoint] + "/api?" + URI.encode_www_form(param: param.to_json, public: public.to_json)
+      JSON.parse(eat url, :openssl_verify_mode => 'none')
+    end
+    #def respond_to?(method)
 
     private
     def get_access_token_from_api
       raise HOWTO_CONFIG unless @app_key or @app_secret
 
-      url = API_ENDPOINT + "token?grant_type=client_credential" + "&appkey=#{@app_key}" + "&secret=#{@app_secret}"
+      url = API[:endpoint] + "/token?" + URI.encode_www_form(grant_type: "client_credential", 
+                                                           appkey: @app_key, 
+                                                           secret: @app_secret)
+
       result = JSON.parse(eat url, :openssl_verify_mode => 'none').fetch('result', {})
+
       @expire_date = Time.now + result['expire_in'] - 120
       @access_token = result['access_token']
 
-      raise "Get access_token Error:" + "url: #{url}" + result.to_s unless @access_token
+      @access_token ? @access_token : raise("Get access_token Error:" + "url: #{url}" + result.to_s)
     end
 
     def access_token_expired?
-      return false unless defined?(@expire_date)
+      return true unless defined?(@expire_date)
       Time.now > @expire_date
     end
 
