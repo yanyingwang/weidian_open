@@ -59,8 +59,7 @@ module Weidian
     end
 
     def access_token_expired?
-      return true unless defined?(@expire_date)
-      Time.now > @expire_date
+      Time.now > (@expire_date || Time.now)
     end
 
   end
