@@ -5,8 +5,6 @@ group :development do
 end
 
 gem 'eat'
-gem 'json'
-
 
 # Specify your gem's dependencies in weidian.gemspec
 gemspec
