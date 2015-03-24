@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'weidian/version'
+require 'weidian_open/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "weidian"
-  spec.version       = Weidian::VERSION
+  spec.name          = "weidian_open"
+  spec.version       = WeidianOpen::VERSION
   spec.authors       = ["YanyingWang"]
   spec.email         = ["yanyingwangwang@gmail.com"]
-  spec.summary       = %q{Weidian}
+  spec.summary       = %q{WeidianOpen}
   spec.description   = %q{Ruby SDK for Weidian Open Platform}
-  spec.homepage      = "https://github.com/yanyingwang/weidian"
+  spec.homepage      = "https://github.com/yanyingwang/weidian_open"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

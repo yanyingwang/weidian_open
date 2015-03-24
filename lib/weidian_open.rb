@@ -2,7 +2,7 @@ require "weidian/version"
 require 'eat'
 require 'json'
 
-module Weidian
+module WeidianOpen
   API = { endpoint: 'https://api.vdian.com',
           version: '1.0',
           format: 'json' }
