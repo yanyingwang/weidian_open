@@ -1,4 +1,4 @@
-# Weidian([微店](http://weidian.com/))
+# WeidianOpen
 =========
 Ruby SDK for weidian Open Platform([微店开放平台](http://open.weidian.com/))
 
@@ -21,8 +21,8 @@ $ gem install weidian_open
 ## Usage
 #### Information about this gem:
 ```ruby
-WeidianOpen::API
-WeidianOpen::HOWTO_CONFIG
+puts WeidianOpen::API
+puts WeidianOpen::HOWTO_CONFIG
 ```
 
 #### Configuration
@@ -44,7 +44,7 @@ after configuration:
 WeidianOpen.access_token
 ```
 
-#### [Weidian API WIKI](http://wiki.open.weidian.com/):
+#### [Weidian Open API WIKI](http://wiki.open.weidian.com/):
 Normally, you can use any Offical API method if HTTP Method of it is GET.
 All you need to do is subsituing "." inside API method name with "_".
 
