@@ -59,7 +59,7 @@ WeidianOpen.vdian_order_list_get(page_num: "1",
 WeidianOpen.vdian_order_list_get(order_type: "unpay", page_num: "1")
 ```
 
-* API method: [vdian.order.get]("http://wiki.open.weidian.com/index.php?title=%E8%8E%B7%E5%8F%96%E8%AE%A2%E5%8D%95%E5%88%97%E8%A1%A8")
+* API method: [vdian.order.get](http://wiki.open.weidian.com/index.php?title=%E8%8E%B7%E5%8F%96%E8%AE%A2%E5%8D%95%E5%88%97%E8%A1%A8)
 ```ruby
 WeidianOpen.vdian_order_get(order_id: "1164787976")
 ```
