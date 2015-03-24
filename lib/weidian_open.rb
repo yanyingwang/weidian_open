@@ -1,4 +1,4 @@
-require "weidian/version"
+require "weidian_open/version"
 require 'eat'
 require 'json'
 
