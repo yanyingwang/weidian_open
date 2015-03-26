@@ -38,8 +38,9 @@ WeidianOpen.app_key = '111111'          # your app_key
 WeidianOpen.app_secret = '1111111111'   # your app_secret
 ```
 
-### Show access token
-after configuration:
+###Access Token
+Access Token can be refreshed automatically by this Gem.
+You can show access token used currently after configuration:
 ```ruby
 WeidianOpen.access_token
 ```
