@@ -36,7 +36,7 @@ module WeidianOpen
       public = { method: method.to_s.gsub('_', '.'),
                  access_token: access_token,
                  version: API[:version],
-                 format: API[:json] }
+                 format: API[:format] }
 
       url = API[:endpoint] + "/api?" + URI.encode_www_form(param: param.to_json, public: public.to_json)
 
