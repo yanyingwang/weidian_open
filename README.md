@@ -1,6 +1,6 @@
 # WeidianOpen
 =========
-Weidian Open Platform([微店开放平台](http://open.weidian.com/)) API in Ruby
+[Weidian Open Platform(微店开放平台)](http://open.weidian.com/) API in Ruby
 
 ## Installation
 Add this line to your application's Gemfile:
