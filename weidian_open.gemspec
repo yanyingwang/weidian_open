@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "weidian_open"
   spec.version       = WeidianOpen::VERSION
   spec.authors       = ["YanyingWang"]
-  spec.email         = ["yanyingwangwang@gmail.com"]
+  spec.email         = ["yanyingwang1@gmail.com"]
   spec.summary       = %q{WeidianOpen}
-  spec.description   = %q{Ruby SDK for Weidian Open Platform}
+  spec.description   = %q{Weidian Open Platform(微店开放平台) API in Ruby}
   spec.homepage      = "https://github.com/yanyingwang/weidian_open"
   spec.license       = "MIT"
 
