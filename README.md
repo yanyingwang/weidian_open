@@ -2,6 +2,8 @@ WeidianOpen
 =========
 [Weidian Open Platform(微店开放平台)](http://open.weidian.com/) API in Ruby
 
+[![Gem Version](https://badge.fury.io/rb/weidian_open.svg)](http://badge.fury.io/rb/weidian_open)
+
 ## Installation
 Add this line to your application's Gemfile:
 ```ruby
